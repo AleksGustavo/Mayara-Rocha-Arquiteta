@@ -9,7 +9,7 @@ conduzida de forma incremental e rastreável, com apoio de ferramentas de IA
 | # | Etapa | Situação |
 |---|---|---|
 | 01 | Discovery do Negócio | **Concluída (08/09/2026)** — ver [`docs/discovery/07-stage-01-closure.md`](docs/discovery/07-stage-01-closure.md) |
-| 02 | Público-alvo | Não iniciada |
+| 02 | Público-alvo | **Concluída (17/09/2026)** — ver [`docs/target-audience/11-stage-02-closure.md`](docs/target-audience/11-stage-02-closure.md). Subetapa **02-E** (pesquisa primária com público real) em andamento: formulário preparado, aguardando teste, piloto e coleta |
 | 03 | Personas | Não iniciada |
 | 04 | Proposta de Valor e Posicionamento | Não iniciada |
 | 05 | Jornada do Cliente e Funil | Não iniciada |
@@ -32,6 +32,11 @@ conduzida de forma incremental e rastreável, com apoio de ferramentas de IA
 > [`docs/discovery/06-open-decisions-register.md`](docs/discovery/06-open-decisions-register.md)
 > e devem ser resolvidos antes da comercialização pública.
 
+> **Público-alvo definido:** produto digital (plantas prontas) como prioridade de crescimento
+> digital, projeto arquitetônico como público primário de serviços, design de interiores como
+> secundário estratégico. Ver [`docs/target-audience/10-target-audience-final.md`](docs/target-audience/10-target-audience-final.md)
+> para a consolidação completa (segmentos S01–S07, evidências e pendências não bloqueadoras).
+
 ## Estrutura
 
 ```text
@@ -44,6 +49,19 @@ docs/
 │   ├── 05-discovery-findings.md      # Consolidação das respostas reais + saneamento (08/09/2026)
 │   ├── 06-open-decisions-register.md # Decisões abertas: OD-001..OD-012 (categoria, responsável, status)
 │   └── 07-stage-01-closure.md        # Encerramento formal da ETAPA 01
+├── target-audience/
+│   ├── 01-target-audience-discovery.md      # Público amplo, segmentos candidatos (S01-S07), hipóteses
+│   ├── 02-segmentation-matrix.md            # Matriz de segmentação + produto × público
+│   ├── 03-priority-audiences.md             # Priorização, JTBD, dores/desejos/objeções
+│   ├── 04-validation-questions.md           # Perguntas de validação + status pós-formulário
+│   ├── 05-form-guide.md                     # Guia de execução do formulário da ETAPA 02
+│   ├── 06-client-validation-results.md      # Respostas reais da Mayara incorporadas
+│   ├── 07-market-validation.md              # Validação externa de mercado (13 concorrentes + dados institucionais)
+│   ├── 08-regional-competitors-input.md     # Concorrentes regionais identificados
+│   ├── 09-regional-competitive-analysis.md  # Inteligência competitiva regional (Leme/Araras/Pirassununga)
+│   ├── 10-target-audience-final.md          # Consolidação definitiva do público-alvo
+│   ├── 11-stage-02-closure.md               # Encerramento formal da ETAPA 02
+│   └── 12-primary-research-form-guide.md    # ETAPA 02-E: guia da pesquisa primária com público real
 └── portfolio/
     ├── linkedin-post.md              # Post de abertura do projeto (anonimizado)
     ├── linkedin-etapa-01.md          # Post de conclusão da ETAPA 01 (anonimizado)
@@ -51,7 +69,9 @@ docs/
 
 scripts/
 └── google-forms/
-    └── create-discovery-form.gs      # Google Apps Script que gera o formulário de Discovery
+    ├── create-discovery-form.gs                    # Google Apps Script que gera o formulário de Discovery
+    ├── create-stage-02-target-audience-form.gs     # Google Apps Script que gera o formulário de validação de público-alvo
+    └── create-stage-02e-public-research-form.gs    # Google Apps Script que gera o formulário da pesquisa primária (02-E)
 ```
 
 ## Princípios do projeto
