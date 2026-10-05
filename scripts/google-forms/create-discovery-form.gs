@@ -53,7 +53,7 @@ var CONFIG = {
  *   scale     ({min,max,low,high}) para LINEAR_SCALE
  *   branch    (obj)     só na pergunta de desvio: { 'texto da opção': 'sectionKey' }
  * Campo de uma seção:
- *   goTo      (string)  sectionKey para onde ir ao terminar a seção (pula páginas)
+ *   goTo      (string)  sectionKey para onde ir ao terminar a seção (pula a página seguinte)
  * =========================================================================== */
 
 var SERVICE_LIST = [
@@ -692,10 +692,15 @@ function addScale(form, q) {
  * escolha (radio) que sejam a ultima pergunta da pagina — que e o caso aqui.
  */
 function configureNavigation(form, pages, branchItem) {
-  // 8A -> pula 8B -> vai para 9
-  FORM_CONFIG.sections.forEach(function (section) {
-    if (section.goTo && pages[section.key] && pages[section.goTo]) {
-      pages[section.key].setGoToPage(pages[section.goTo]);
+  // 8A -> pula 8B -> vai para 9.
+  // ATENCAO (OD-012): PageBreakItem.setGoToPage(...) vale "depois de concluir a pagina
+  // ANTERIOR a este page break (ao chegar nele por progressao linear)". Portanto o salto
+  // de uma secao X deve ser configurado no page break da secao SEGUINTE a X, e nao no de X.
+  // Chegar a 8B por escolha de resposta (navegacao do FORM-Q36) nao dispara este salto.
+  FORM_CONFIG.sections.forEach(function (section, idx) {
+    var next = FORM_CONFIG.sections[idx + 1];
+    if (section.goTo && next && pages[next.key] && pages[section.goTo]) {
+      pages[next.key].setGoToPage(pages[section.goTo]);
     }
   });
 
