@@ -9,7 +9,7 @@ conduzida de forma incremental e rastreável, com apoio de ferramentas de IA
 | # | Etapa | Situação |
 |---|---|---|
 | 01 | Discovery do Negócio | **Concluída (08/09/2026)** — ver [`docs/discovery/07-stage-01-closure.md`](docs/discovery/07-stage-01-closure.md) |
-| 02 | Público-alvo | **Concluída (17/09/2026)** — ver [`docs/target-audience/11-stage-02-closure.md`](docs/target-audience/11-stage-02-closure.md) |
+| 02 | Público-alvo | **Concluída (17/09/2026)** — ver [`docs/target-audience/11-stage-02-closure.md`](docs/target-audience/11-stage-02-closure.md). Subetapa **02-E** (pesquisa primária com público real) em andamento: formulário preparado, aguardando teste, piloto e coleta |
 | 03 | Personas | Não iniciada |
 | 04 | Proposta de Valor e Posicionamento | Não iniciada |
 | 05 | Jornada do Cliente e Funil | Não iniciada |
@@ -60,7 +60,8 @@ docs/
 │   ├── 08-regional-competitors-input.md     # Concorrentes regionais identificados
 │   ├── 09-regional-competitive-analysis.md  # Inteligência competitiva regional (Leme/Araras/Pirassununga)
 │   ├── 10-target-audience-final.md          # Consolidação definitiva do público-alvo
-│   └── 11-stage-02-closure.md               # Encerramento formal da ETAPA 02
+│   ├── 11-stage-02-closure.md               # Encerramento formal da ETAPA 02
+│   └── 12-primary-research-form-guide.md    # ETAPA 02-E: guia da pesquisa primária com público real
 └── portfolio/
     ├── linkedin-post.md              # Post de abertura do projeto (anonimizado)
     ├── linkedin-etapa-01.md          # Post de conclusão da ETAPA 01 (anonimizado)
@@ -69,7 +70,8 @@ docs/
 scripts/
 └── google-forms/
     ├── create-discovery-form.gs                    # Google Apps Script que gera o formulário de Discovery
-    └── create-stage-02-target-audience-form.gs     # Google Apps Script que gera o formulário de validação de público-alvo
+    ├── create-stage-02-target-audience-form.gs     # Google Apps Script que gera o formulário de validação de público-alvo
+    └── create-stage-02e-public-research-form.gs    # Google Apps Script que gera o formulário da pesquisa primária (02-E)
 ```
 
 ## Princípios do projeto
